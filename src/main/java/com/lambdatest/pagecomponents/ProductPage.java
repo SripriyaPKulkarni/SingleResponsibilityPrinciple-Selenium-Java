@@ -5,15 +5,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SpecialLinkBar extends Component {
-    public SpecialLinkBar(WebDriver driver) {
+public class ProductPage extends Component {
+    public ProductPage(WebDriver driver) {
         super(driver);
 
     }
-    @FindBy(xpath = "//ul[@class='navbar-nav horizontal']//span[@class='title'][normalize-space()='Special']")
-    private WebElement specialbutton;
+    @FindBy(xpath = "//h4[normalize-space()='Laptops']")
+    private WebElement laptop_button;
 
     public void clickOnSpecialButton() {
-        this.specialbutton.click();
+
+
+      this.laptop_button.click();
     }
+
+
+
 }

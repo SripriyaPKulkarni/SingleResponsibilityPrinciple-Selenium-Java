@@ -34,7 +34,17 @@ public class TestWithPattern extends BaseTest {
         lambdatestHomePage.navigateTo().clickOnSearchButton();
         lambdatestHomePage.navigateTo().SearchField();
 
-        lambdatestHomePage.specialLinkBar().clickOnSpecialButton();
+        lambdatestHomePage.goTo();
+
+
+        lambdatestHomePage.productpage().clickOnSpecialButton();
+
+        //print the title of the Special Page
+        String actualTitle="";
+        actualTitle=driver.getTitle();
+        System.out.println(actualTitle);
+
+
 
     }
 

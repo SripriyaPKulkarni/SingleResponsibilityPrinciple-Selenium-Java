@@ -11,10 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -22,7 +19,7 @@ import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-    protected WebDriver driver;
+    /*protected WebDriver driver;
 
     @BeforeTest public void setupDriver() {
         System.setProperty("webdriver.chrome.driver",
@@ -37,14 +34,14 @@ public class BaseTest {
     @AfterTest public void quitDriver() {
         Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
         this.driver.quit();
-    }
-   /*public String username = "sripriyapkulkarni";
+    }*/
+   public String username = "sripriyapkulkarni";
     public String accesskey = "0JtfDYxpML64zCQoyNfb9RBRkZSry5Q1LZ6LXPrJxbVJmVjx4M";
     public static RemoteWebDriver driver = null;
     public String gridURL = "@hub.lambdatest.com/wd/hub";
     boolean status = false;
 
-    @BeforeClass
+    @BeforeSuite
     public void setUp() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", "chrome");
@@ -61,12 +58,12 @@ public class BaseTest {
         }
     }
 
-    @AfterClass
+    @AfterSuite
     public void tearDown() throws Exception {
         if (driver != null) {
             ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             driver.quit();
         }
     }
-*/
+
 }
